@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
+    "@types/selenium-webdriver": "^4.1.15",
     "babel-jest": "^29.5.0",
     "mocha": "^10.2.0"
   }

@@ -3,7 +3,7 @@ import chrome from "selenium-webdriver/chrome.js";
 
 const selenium = async () => {
   const driver = await new Builder()
-    .forBrowser(Browser.CHROME)
+    .forBrowser(Browser.EDGE)
     .setChromeService(new chrome.ServiceBuilder("./chromedriver.exe"))
     .build();
   try {
