@@ -57,5 +57,14 @@ suite(function () {
       const title = await driver.getTitle();
       assert.equal(title, `Sign out`);
     });
+
+    it("[http://3.89.221.7] Comprueba si existe un mensaje de error, si no se ingresa ninguna credencial", async () => {
+      await driver.get("http://3.89.221.7/login");
+
+      await driver.findElement(By.id("login-submit")).submit();
+      const pageSource = await driver.getPageSource();
+      const errorMessage = pageSource.includes("Please type your email");
+      assert.ok(errorMessage);
+    });
   });
 });
